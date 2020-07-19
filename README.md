@@ -7,12 +7,10 @@
 Build an application that enhances or improves the management of this crisis or future instances.
 
 ## Concept
-A web application that crunches big data to determine communities that are most at risk (i.e. not enough PPE + growing cases + bad policy + aging/weak population). Focus on the ease of use, design, and implementation of core feature first.
+A web application that provides a daily digest of COVID news, allowing the user to filter out which updates they are seeing. It would store the settings in local storage, without the user having to create an account, etc.
 
 ## Tools
-- Backend - Ruby or Django? MongoDB? mySQL?
-- Frontend - Vue? React?, Sass, Rollup, Chai
+- Backend - Lightweight Node
+- Frontend - Pure HTML/CSS/JS + bundler? Rollup?
 - CI/CD - Github Actions
 - Deployment - Heroku
-
-
