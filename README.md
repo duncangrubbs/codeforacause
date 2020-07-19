@@ -10,7 +10,7 @@ Build an application that enhances or improves the management of this crisis or 
 A web application that provides a daily digest of COVID news, allowing the user to filter out which updates they are seeing. It would store the settings in local storage, without the user having to create an account, etc.
 
 ## Tools
-- Backend - Lightweight Node
+- Backend - Lightweight Express Server
 - Frontend - Pure HTML/CSS/JS + bundler? Rollup?
 - CI/CD - Github Actions
 - Deployment - Heroku
