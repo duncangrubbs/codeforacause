@@ -14,3 +14,13 @@ A web application that provides a daily digest of COVID news, allowing the user 
 - Frontend - Pure HTML/CSS/JS + bundler? Rollup?
 - CI/CD - Github Actions
 - Deployment - Heroku
+
+## Todo:
+- [x] Basic Code Setup
+- [ ] Design
+- [ ] Settings List and how they will effect data
+- [ ] Data Fetching
+- [ ] Service Worker and Cache
+- [ ] Use bundler like rollup
+- [ ] Testing
+- [ ] CI/CD GHA & Heroku Setup
