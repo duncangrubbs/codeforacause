@@ -7,7 +7,7 @@ export function putData(key, value) {
 }
 
 export function getData(key) {
-
+  return localStorage.getItem(key);
 }
 
 export function removeData(key) {
