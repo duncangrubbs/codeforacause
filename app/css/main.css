@@ -18,3 +18,24 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--dark-background);
+  width: 100px;
+  height: 35px;
+  border-radius: 8px;
+  margin: 8px;
+}
+
+.setting:hover {
+  cursor: pointer;
+  box-shadow: var(--standard-shadow);
+}
+
+.setting.selected {
+  background: var(--dark-background);
+  color: white;
+}

@@ -15,6 +15,11 @@ A web application that provides a daily digest of COVID news, allowing the user 
 - CI/CD - Github Actions
 - Deployment - Heroku
 
+## Settings:
+1. **Limited:** Basic local (County and State) numbers, described in plain English, and press releases.
+2. **Standard:** National and global data, press from wh.gov and the WHO.
+3. **Extensive:** All of the above along with new scientific papers, editorials from various sources, etc.
+
 ## Todo:
 - [x] Basic Code Setup
 - [ ] Design

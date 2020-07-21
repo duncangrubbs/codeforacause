@@ -4,4 +4,14 @@ const url3 = 'https://covidtracking.com/api/v1/states/ca/current.json';
 
 fetch(url3)
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => {
+    const list = document.getElementById('numbers');
+    console.log(data); // eslint-disable-line
+    Object.keys(data).forEach(key => {
+      let tmp = document.createElement('ul');
+      tmp.innerText = key + " " + data[key];
+      list.appendChild(tmp);
+    })
+  });
+
+
