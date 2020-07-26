@@ -14,9 +14,8 @@
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-img {
-  width: 100px;
-  height: auto;
+button:focus {
+  outline: none;
 }
 
 html, body {
@@ -28,18 +27,24 @@ html, body {
   display: flex;
   width: 100vw;
   flex-direction: column;
-  align-items: center;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
 }
 
 .setting {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--dark-background);
-  width: 100px;
-  height: 35px;
+  width: 200px;
+  height: 70px;
   border-radius: 8px;
+  font-size: 18px;
+  border: none;
   margin: 8px;
+  transition: all .1s ease-in-out;
 }
 
 .setting:hover {
@@ -50,4 +55,55 @@ html, body {
 .setting.selected {
   background: var(--dark-background);
   color: white;
+}
+
+#numbers {
+  width: 100vw;
+  background: rgb(233, 233, 233);
+  display: grid;
+  grid-template-columns: 230px 230px 230px;
+  grid-template-rows: 100px 100px;
+  padding: 16px 0;
+}
+
+.number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 70px;
+  font-size: 18px;
+  color: var(--light-background);
+  background: var(--dark-background);
+  margin: 8px;
+}
+
+#news {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70wv;
+}
+
+.news-article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  padding: 16px 8px;
+  max-width: 600px;
+  transition: all .1s ease-in-out;
+  text-align: right;
+}
+
+.news-article:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.news-img {
+  width: 164px;
+  height: auto;
+  margin: 0 8px;
+  border-radius: 6px;
 }

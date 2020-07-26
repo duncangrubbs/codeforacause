@@ -3,14 +3,18 @@ import { putData, getData } from './data-storage.js';
 
 // DATA API for numbers from the Atlantic
 
-const url1 = 'https://covidtracking.com/api/v1/us/daily.json';
-const url2 = 'https://covidtracking.com/api/v1/states/info.json';
-const url3 = 'https://covidtracking.com/api/v1/states/ca/current.json';
+const COVID_TRACKING_1 = 'https://covidtracking.com/api/v1/us/daily.json';
+const COVID_TRACKING_2 = 'https://covidtracking.com/api/v1/states/info.json';
+const COVID_TRACKING_3 = 'https://covidtracking.com/api/v1/states/ca/current.json';
 
 // News API
 const NEWS_API_KEY = 'apiKey=3302ef91900d49c6a4a560f1b5d5c561';
 const NEWSAPI_BASE_URL = 'http://newsapi.org/v2/everything?q=';
-const SAMPLE_QUERY = 'covid&from=2020-06-21&sortBy=publishedAt&';
+const NEWSAPI_BASE_TOP = 'https://newsapi.org/v2/top-headlines?country=us&';
+const SAMPLE_QUERY = 'covid&from=2020-07-24&sortBy=publishedAt&';
+
+// Corona API
+const CORONA_API  = 'https://corona-api.com/countries/US'
 
 function getDataFromURL(url) {
   return fetch(url)
@@ -25,33 +29,57 @@ if (Date.now() - lastUpdated > 10*60*1000) {
   putData('last_updated', Date.now());
 }
 
-getDataFromURL(url3).then(data => {
+getDataFromURL(COVID_TRACKING_3).then(data => {
   const list = document.getElementById('numbers');
   console.log(data); // eslint-disable-line
-  Object.keys(data).forEach(key => {
-    let tmp = document.createElement('li');
-    tmp.innerText = key + " " + data[key];
-    list.appendChild(tmp);
-  })
-})
 
-const list2 = document.getElementById('news');
-fetch(NEWSAPI_BASE_URL + SAMPLE_QUERY + NEWS_API_KEY)
+  let subElement = document.createElement('div');
+  subElement.classList.add('number');
+  subElement.innerText = data['positive'] + ' Cases';
+  list.appendChild(subElement);
+
+  subElement = document.createElement('div');
+  subElement.classList.add('number');
+  subElement.innerText = data['negative'] + ' Negative';
+  list.appendChild(subElement);
+
+  subElement = document.createElement('div');
+  subElement.classList.add('number');
+  subElement.innerText = data['hospitalizedCurrently'] + ' Hospitalized';
+  list.appendChild(subElement);
+
+  subElement = document.createElement('div');
+  subElement.classList.add('number');
+  subElement.innerText = data['death'] + ' Deaths';
+  list.appendChild(subElement);
+
+  subElement = document.createElement('div');
+  subElement.classList.add('number');
+  subElement.innerText = '+' + data['deathIncrease'] + ' deaths';
+  list.appendChild(subElement);
+});
+
+const newList = document.getElementById('news');
+
+fetch(NEWSAPI_BASE_TOP + NEWS_API_KEY)
   .then(response => response.json())
   .then(data => {
     console.log(data); // eslint-disable-line
     data.articles.forEach(article => {
-      let tmp = document.createElement('a');
-      tmp.innerText = article.title;
-      tmp.href = article.url;
-      list2.appendChild(tmp);
+      let newsWrapper = document.createElement('div');
+      newsWrapper.classList.add('news-article');
 
-      tmp = document.createElement('p');
-      tmp.innerText = "By: " + article.author;
-      list2.appendChild(tmp);
+      let subElement = document.createElement('img');
+      subElement.classList.add('news-img');
+      subElement.src = article.urlToImage;
+      newsWrapper.appendChild(subElement);
 
-      tmp = document.createElement('img');
-      tmp.src = article.urlToImage;
-      list2.appendChild(tmp);
+      subElement = document.createElement('a');
+      subElement.classList.add('news-link');
+      subElement.innerText = article.title;
+      subElement.href = article.url;
+      newsWrapper.appendChild(subElement);
+
+      newList.appendChild(newsWrapper);
     })
   });
