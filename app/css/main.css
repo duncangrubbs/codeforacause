@@ -27,6 +27,7 @@ html, body {
   display: flex;
   width: 100vw;
   flex-direction: column;
+  padding: 16px;
 }
 
 .settings {
@@ -57,13 +58,11 @@ html, body {
   color: white;
 }
 
-#numbers {
+#local-numbers, #us-numbers {
   width: 100vw;
-  background: rgb(233, 233, 233);
   display: grid;
   grid-template-columns: 230px 230px 230px;
   grid-template-rows: 100px 100px;
-  padding: 16px 0;
 }
 
 .number {
@@ -76,7 +75,6 @@ html, body {
   font-size: 18px;
   color: var(--light-background);
   background: var(--dark-background);
-  margin: 8px;
 }
 
 #news {

@@ -1,15 +1,15 @@
 export function putData(key, value) {
   if (localStorage.getItem(key) != null) {
-    return false;
+    removeData(key);
+    localStorage.setItem(key, JSON.stringify(value));
   }
   localStorage.setItem(key, JSON.stringify(value));
-  return true;
 }
 
 export function getData(key) {
-  return localStorage.getItem(key);
+  return localStorage.getItem(key).replace(/"/g, '');
 }
 
-export function removeData(key) {
-
+function removeData(key) {
+  localStorage.removeItem(key);
 }
