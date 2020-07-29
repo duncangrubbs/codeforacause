@@ -114,6 +114,7 @@ function getNewsData() {
       let subElement = document.createElement('img');
       subElement.classList.add('news-img');
       subElement.src = article.urlToImage;
+      subElement.alt = 'IMG';
       newsWrapper.appendChild(subElement);
   
       subElement = document.createElement('a');
