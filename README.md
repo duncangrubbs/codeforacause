@@ -24,12 +24,12 @@ The app is built around three governing principles:
 - To start a dev server, run `yarn start` or `npm start`. This will start a dev server at `localhost:5000` which you can view in your browser
 - I have only extensively tested in Google Chrome, and note that **the site will not work in Safari because you are required to have an https connection for location data to be accessed.**
 
-## 📊 Settings:
+## 📊 Settings
 1. **Basic:** Basic state numbers.
 2. **General:** State and US numbers.
 3. **Extensive:** All of the above along with top headlines and news articles.
 
-## Todo:
+## Todo
 - [x] Basic Code Setup
 - [x] Design
 - [x] Settings List and how they will effect data

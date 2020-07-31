@@ -12,9 +12,10 @@ and (orientation: portrait) {
   .article-link {
     margin-left: 16px;
   }
-  #local-numbers, #us-numbers {
-    grid-template-columns: 95%;
-    grid-template-rows: none;
+  .article {
+    padding: 0;
+    max-width: none;
+    margin: 0 0 32px 0;
   }
   .number {
     width: 100%;
@@ -24,10 +25,9 @@ and (orientation: portrait) {
   #news, #science {
     grid-template-columns: 100%;
   }
-  .article {
-    padding: 0;
-    max-width: none;
-    margin: 0 0 32px 0;
+  #local-numbers, #us-numbers {
+    grid-template-columns: 95%;
+    grid-template-rows: none;
   }
   #footer {
     padding: 1.5% 0;
