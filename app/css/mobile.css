@@ -29,4 +29,7 @@ and (orientation: portrait) {
     max-width: none;
     margin: 0 0 32px 0;
   }
+  #footer {
+    padding: 1.5% 0;
+  }
 }
