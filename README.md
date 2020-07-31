@@ -1,4 +1,4 @@
-# COVID-19 Daily Dashboard
+# COVID-19 Daily Digest
 > M&amp;T Bank Summer Technology Intern Challenge
 
 ## Challenge Description
@@ -23,6 +23,7 @@ The app is built around three governing principles:
 - Clone this repository and run `npm install` or `yarn install`
 - To start a dev server, run `yarn start` or `npm start`. This will start a dev server at `localhost:3000` which you can view in your browser.
 - To build run `yarn build` or `npm build`
+- To deploy, I use `surge.sh` and run `yarn deploy` or `npm deploy`, but you must be authenticated with `surge.sh`
 
 ## Settings:
 1. **Basic:** Basic local (State) numbers.

@@ -39,7 +39,7 @@ const COVID_TRACKING_2 = 'https://covidtracking.com/api/v1/us/current.json';
 
 // News API
 const NEWS_API_KEY = 'apiKey=3302ef91900d49c6a4a560f1b5d5c561';
-const NEWSAPI_BASE_URL = 'http://newsapi.org/v2/top-headlines?country=us&q=';
+const NEWSAPI_BASE_URL = 'https://newsapi.org/v2/top-headlines?country=us&q=';
 const NEWS_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&category=general&pageSize=10&`;
 const SCIENCE_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&category=health&pageSize=10&`;
 

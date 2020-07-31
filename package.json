@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "deploy": "surge -d coviddailydigest.surge.sh -p ./app"
   },
   "repository": "https://github.com/duncangrubbs/codeforacause.git",
   "author": "Duncan Grubbs <duncan.grubbs@gmail.com>",
