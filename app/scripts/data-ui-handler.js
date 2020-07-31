@@ -13,6 +13,10 @@ function getFormattedDate() {
   return `${month}-${day}-${year}`;
 }
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
 function getDataFromURL(url) {
   return fetch(url)
     .then((res) => res.json().then((blob) => Promise.resolve(blob)));
@@ -28,10 +32,6 @@ function clearData() {
   USNumbers.textContent = '';
   news.textContent = '';
   science.textContent = '';
-}
-
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 // DATA API for numbers from the Atlantic
