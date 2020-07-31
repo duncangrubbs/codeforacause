@@ -18,7 +18,6 @@ const buttons = [];
 
 function updateSetting(setting) {
   if (settings.includes(setting)) {
-    console.log(setting); // eslint-disable-line
     putData('setting', setting);
     CURRENT_SETTING = setting;
   }

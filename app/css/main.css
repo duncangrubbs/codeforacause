@@ -23,11 +23,15 @@ html, body {
   padding: 0;
 }
 
+.intro-text {
+  max-width: 600px;
+}
+
 .app-wrapper {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  width: 100vw;
+  align-items: center;
 }
 
 .settings {
@@ -44,7 +48,8 @@ html, body {
   border-radius: 8px;
   font-size: 1rem;
   border: none;
-  margin: 8px;
+  padding: 0;
+  margin: 12px 8px 12px 0;
   transition: all .1s ease-in-out;
 }
 
@@ -61,6 +66,7 @@ html, body {
 .data-wrapper {
   display: flex;
   width: 100%;
+  max-width: 1000px;
   flex-direction: row;
 }
 
