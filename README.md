@@ -22,7 +22,7 @@ A web application that provides a daily digest of COVID news, allowing the user 
 
 ## Todo:
 - [x] Basic Code Setup
-- [ ] Design
+- [x] Design
 - [x] Settings List and how they will effect data
 - [x] Data Fetching
 - [ ] Service Worker and Cache

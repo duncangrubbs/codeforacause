@@ -89,7 +89,7 @@ html, body {
   grid-template-columns: 40% 40%;
 }
 
-.news-article, .science-article {
+.article {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -101,18 +101,18 @@ html, body {
   transition: all .3s ease;
 }
 
-.news-link {
+.article-link {
   color: var(--dark-text);
   font-size: 18px;
   max-width: 200px;
   margin-left: 24px;
 }
 
-.news-article:hover {
+.article:hover {
   background: rgb(236, 236, 236);
 }
 
-.news-img {
+.article-img {
   width: 164px;
   height: auto;
   margin: 0 8px;

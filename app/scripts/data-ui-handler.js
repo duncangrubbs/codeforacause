@@ -14,8 +14,8 @@ function getFormattedDate() {
 // News API
 const NEWS_API_KEY = 'apiKey=3302ef91900d49c6a4a560f1b5d5c561';
 const NEWSAPI_BASE_URL = 'http://newsapi.org/v2/top-headlines?country=us&q=';
-const NEWS_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&category=general&`;
-const SCIENCE_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&category=health&`;
+const NEWS_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&category=general&pageSize=10&`;
+const SCIENCE_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&category=health&pageSize=10&`;
 
 const NEWS_URL = NEWSAPI_BASE_URL + NEWS_QUERY + NEWS_API_KEY;
 const SCIENCE_URL = NEWSAPI_BASE_URL + SCIENCE_QUERY + NEWS_API_KEY;
@@ -123,19 +123,18 @@ function getUSNumbers() {
 function getNewsData() {
   getDataFromURL(NEWS_URL).then(data => {
     const newList = document.getElementById('news');
-    console.log(data); // eslint-disable-line
     data.articles.forEach(article => {
       let newsWrapper = document.createElement('div');
-      newsWrapper.classList.add('news-article');
+      newsWrapper.classList.add('article');
   
       let subElement = document.createElement('img');
-      subElement.classList.add('news-img');
+      subElement.classList.add('article-img');
       subElement.src = article.urlToImage;
       subElement.alt = 'IMG';
       newsWrapper.appendChild(subElement);
   
       subElement = document.createElement('a');
-      subElement.classList.add('news-link');
+      subElement.classList.add('article-link');
       subElement.innerText = article.title;
       subElement.href = article.url;
       newsWrapper.appendChild(subElement);
@@ -148,20 +147,18 @@ function getNewsData() {
 function getScienceData() {
   getDataFromURL(SCIENCE_URL).then(data => {
     const newList = document.getElementById('science');
-    console.log('science data'); // eslint-disable-line
-    console.log(data); // eslint-disable-line
     data.articles.forEach(article => {
       let newsWrapper = document.createElement('div');
-      newsWrapper.classList.add('science-article');
+      newsWrapper.classList.add('article');
   
       let subElement = document.createElement('img');
-      subElement.classList.add('news-img');
+      subElement.classList.add('article-img');
       subElement.src = article.urlToImage;
       subElement.alt = 'IMG';
       newsWrapper.appendChild(subElement);
   
       subElement = document.createElement('a');
-      subElement.classList.add('news-link');
+      subElement.classList.add('article-link');
       subElement.innerText = article.title;
       subElement.href = article.url;
       newsWrapper.appendChild(subElement);
