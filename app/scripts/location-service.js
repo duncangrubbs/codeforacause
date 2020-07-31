@@ -4,6 +4,7 @@
  */
 
 import { putData, getData } from './data-storage.js';
+import { updateDataUI } from './data-ui-handler.js';
 
 const API_KEY = 'AIzaSyBXU9nt2HU2-MPzE_rcDyjW7wK3xau8xJg';
 
@@ -27,6 +28,9 @@ function getLocation() {
           }
         }
         putData('state', state);
+        const setting = getData('setting');
+
+        updateDataUI(setting, state);
       });
   };
   navigator.geolocation.getCurrentPosition(geoSuccess);
