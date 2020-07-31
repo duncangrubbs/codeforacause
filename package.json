@@ -4,7 +4,8 @@
   "description": "M&T Bank Summer Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint . --fix"
   },
   "repository": "https://github.com/duncangrubbs/codeforacause.git",
   "author": "Duncan Grubbs <duncan.grubbs@gmail.com>",
@@ -14,10 +15,11 @@
   },
   "devDependencies": {
     "eslint": "^7.5.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-react": "^7.20.5"
   }
 }

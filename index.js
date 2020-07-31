@@ -1,9 +1,10 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
 
-app.use(express.static('app'))
+const app = express();
+const port = 3000;
 
-app.get('*', (req, res) => res.send())
+app.use(express.static('app'));
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.get('*', (req, res) => res.send());
+
+app.listen(port, () => console.log(`CFAC App listening at http://localhost:${port}`)); // eslint-disable-line

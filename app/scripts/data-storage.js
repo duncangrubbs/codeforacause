@@ -1,3 +1,12 @@
+/**
+ * @author Duncan Grubbs
+ * @description Handles data persistence for the app in local storage.
+ */
+
+function removeData(key) {
+  localStorage.removeItem(key);
+}
+
 export function putData(key, value) {
   if (localStorage.getItem(key) != null) {
     removeData(key);
@@ -8,8 +17,4 @@ export function putData(key, value) {
 
 export function getData(key) {
   return localStorage.getItem(key).replace(/"/g, '');
-}
-
-function removeData(key) {
-  localStorage.removeItem(key);
 }

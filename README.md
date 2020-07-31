@@ -12,8 +12,7 @@ A web application that provides a daily digest of COVID news, allowing the user 
 ## Tools
 - Backend - Lightweight Express Server
 - Frontend - Pure HTML/CSS/JS + bundler? Rollup?
-- CI/CD - Github Actions
-- Deployment - Heroku
+- Deployment - GH Pages
 
 ## Settings:
 1. **Limited:** Basic local (County and State) numbers, described in plain English, and press releases.
@@ -26,6 +25,7 @@ A web application that provides a daily digest of COVID news, allowing the user 
 - [x] Settings List and how they will effect data
 - [x] Data Fetching
 - [ ] Service Worker and Cache
+- [ ] Mobile styles
 - [ ] Use bundler like rollup
-- [ ] Testing
-- [ ] CI/CD GHA & Heroku Setup
+- [ ] Testing?
+- [ ] Deploy to GH Pages
