@@ -12,6 +12,16 @@ if (Date.now() - lastUpdated > 10 * 60 * 1000) {
   putData('last_updated', Date.now());
 }
 
-const setting = getData('setting');
+function run() {
+  const setting = getData('setting');
+  const state = getData('state');
 
-updateDataUI(setting);
+  updateDataUI(setting, state);
+}
+
+while (true) {
+  if (getData('state') != null) {
+    run();
+    break;
+  }
+}

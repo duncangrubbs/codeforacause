@@ -15,8 +15,8 @@ A web application that provides a daily digest of COVID news, allowing the user 
 - Deployment - GH Pages
 
 ## Settings:
-1. **Limited:** Basic local (County and State) numbers, described in plain English, and press releases.
-2. **Standard:** National and global data, press from wh.gov and the WHO.
+1. **Limited:** Basic local (State) numbers.
+2. **Standard:** Local and national numbers.
 3. **Extensive:** All of the above along with new scientific papers, editorials from various sources, etc.
 
 ## Todo:
@@ -25,7 +25,7 @@ A web application that provides a daily digest of COVID news, allowing the user 
 - [x] Settings List and how they will effect data
 - [x] Data Fetching
 - [ ] Service Worker and Cache
-- [ ] Mobile styles
+- [x] Mobile styles
 - [ ] Use bundler like rollup
 - [ ] Testing?
 - [ ] Deploy to GH Pages

@@ -16,5 +16,8 @@ export function putData(key, value) {
 }
 
 export function getData(key) {
-  return localStorage.getItem(key).replace(/"/g, '');
+  if (localStorage.getItem(key) != null) {
+    return localStorage.getItem(key).replace(/"/g, '');
+  }
+  return null;
 }

@@ -36,7 +36,6 @@ function numberWithCommas(x) {
 
 // DATA API for numbers from the Atlantic
 const COVID_TRACKING_2 = 'https://covidtracking.com/api/v1/us/current.json';
-const COVID_TRACKING_3 = 'https://covidtracking.com/api/v1/states/ca/current.json';
 
 // News API
 const NEWS_API_KEY = 'apiKey=3302ef91900d49c6a4a560f1b5d5c561';
@@ -47,8 +46,8 @@ const SCIENCE_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&categ
 const NEWS_URL = NEWSAPI_BASE_URL + NEWS_QUERY + NEWS_API_KEY;
 const SCIENCE_URL = NEWSAPI_BASE_URL + SCIENCE_QUERY + NEWS_API_KEY;
 
-function getLocalNumbers() {
-  getDataFromURL(COVID_TRACKING_3).then((data) => {
+function getLocalNumbers(url) {
+  getDataFromURL(url).then((data) => {
     const list = document.getElementById('local-numbers');
 
     let subElement = document.createElement('div');
@@ -143,24 +142,25 @@ function getScienceData() {
   });
 }
 
-export function updateDataUI(setting) {
+export function updateDataUI(setting, state) {
   clearData();
+  const LOCAL_DATA_URL = `https://covidtracking.com/api/v1/states/${state.toLowerCase()}/current.json`;
   switch (setting) {
     case 'LIMITED':
-      getLocalNumbers();
+      getLocalNumbers(LOCAL_DATA_URL);
       break;
     case 'STANDARD':
-      getLocalNumbers();
+      getLocalNumbers(LOCAL_DATA_URL);
       getUSNumbers();
       break;
     case 'EXTENSIVE':
-      getLocalNumbers();
+      getLocalNumbers(LOCAL_DATA_URL);
       getUSNumbers();
       getNewsData();
       getScienceData();
       break;
     default:
-      getLocalNumbers();
+      getLocalNumbers(LOCAL_DATA_URL);
       getUSNumbers();
   }
 }

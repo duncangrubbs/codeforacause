@@ -34,7 +34,7 @@ function eventHandler(event) {
   if (!event.target.classList.contains('selected')) {
     updateSetting(event.target.id);
     updateButtonClasses(event.target);
-    updateDataUI(CURRENT_SETTING);
+    updateDataUI(CURRENT_SETTING, getData('state'));
   }
 }
 
