@@ -146,10 +146,10 @@ export function updateDataUI(setting, state) {
   clearData();
   const LOCAL_DATA_URL = `https://covidtracking.com/api/v1/states/${state.toLowerCase()}/current.json`;
   switch (setting) {
-    case 'LIMITED':
+    case 'BASIC':
       getLocalNumbers(LOCAL_DATA_URL);
       break;
-    case 'STANDARD':
+    case 'GENERAL':
       getLocalNumbers(LOCAL_DATA_URL);
       getUSNumbers();
       break;

@@ -5,27 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>COVID Dashboard</title>
-    <!-- <link rel="icon" 
+    <title>Daily Digest</title>
+    <link rel="icon" 
       type="image/png" 
-      href="./res/favicon.png"> -->
+      href="favicon.png">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <meta name="AdsBot-Google" content="noindex">
-    <meta name="description" content="Dashboard for COVID Data">
-    <meta name="keywords" content="COVID">
-
-    <!-- Android -->
-    <!-- <meta name="theme-color" content="#8CE5E1"> -->
+    <meta name="description" content="Daily Dashboard for COVID-19 Data">
+    <meta name="keywords" content="COVID-19,Dashboard,Data,Daily">
 
     <!-- iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="COVID Dashboard">
-    <meta name="application-name" content="COVID Dashboard">
-
-    <!-- iOS -->
-    <!-- <link rel="mask-icon" color="#8CE5E1"> -->
+    <meta name="apple-mobile-web-app-title" content="COVID-19 Dashboard">
+    <meta name="application-name" content="COVID-19 Dashboard">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
@@ -40,15 +34,17 @@
   <body>
     <div class="app-wrapper">
       <div>
-        <h1>COVID Daily Digest</h1>
+        <h1>COVID-19 Daily Digest</h1>
         <p class="intro-text">
-          Welcome to your COVID daily digest. This is your one-stop-shop for COVID information, adjusted to your needs.
-          You can choose your data setting below, with limited only providing data for your state, standard also providing
-          data for the US, and extensive providing all data, along with news and science articles.
+          <em>Welcome, to your COVID-19 daily digest;</em> a central location for up-to-date COVID-19 information, adjusted to your needs.
+          Mental health is incredibly important in times like these. Eye-grabbing headlines and global statistics can be damaging when seen
+          every day. Here, you can <b>choose how much you want to see</b>, so you can stay <b>informed</b> while remaining <b>sane</b>.
+          Below, you can choose your filter setting. <b>Basic</b> provides only local numbers. <b>General</b> includes US numbers along with
+          more specific local data. <b>Extensive</b> adds news and science articles to the comprehensive data.
         </p>
         <div class="settings">
-          <button class="setting" id="LIMITED">Limited</button>
-          <button class="setting" id="STANDARD">Standard</button>
+          <button class="setting" id="BASIC">Basic</button>
+          <button class="setting selected" id="GENERAL">General</button>
           <button class="setting" id="EXTENSIVE">Extensive</button>
         </div>
       </div>
@@ -78,8 +74,14 @@
     <div id="footer">
       <div class="footer-column">
         <div class="footer-column__header">Resources</div>
+        <a class="footer-column__link" href="https://www.who.int/">WHO</a>
+        <a class="footer-column__link" href="https://www.cdc.gov/">CDC</a>
+        <a class="footer-column__link" href="https://covidinfo.jhu.edu/">John's Hopkins</a>
+      </div>
+      <div class="footer-column">
+        <div class="footer-column__header">Data</div>
         <a class="footer-column__link" href="http://newsapi.org">News API</a>
-        <a class="footer-column__link" href="https://covidtracking.com">COVID Tracking</a>
+        <a class="footer-column__link" href="https://covidtracking.com">COVID-19 Tracking</a>
         <a class="footer-column__link" href="https://corona-api.com">Corona API</a>
         <a class="footer-column__link" href="https://github.com/duncangrubbs/codeforacause">Source Code</a>
       </div>

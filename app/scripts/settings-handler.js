@@ -8,12 +8,12 @@ import { updateDataUI } from './data-ui-handler.js';
 import { putData, getData } from './data-storage.js';
 
 const settings = [
-  'LIMITED',
-  'STANDARD',
+  'BASIC',
+  'GENERAL',
   'EXTENSIVE',
 ];
 
-let CURRENT_SETTING = 'STANDARD';
+let CURRENT_SETTING = 'GENERAL';
 const buttons = [];
 
 function updateSetting(setting) {

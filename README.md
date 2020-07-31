@@ -1,4 +1,4 @@
-# COVID Daily Dashboard
+# COVID-19 Daily Dashboard
 > M&amp;T Bank Summer Technology Intern Challenge
 
 ## Challenge Description
@@ -7,7 +7,7 @@
 Build an application that enhances or improves the management of this crisis or future instances.
 
 ## App Description
-The COVID Daily Dashboard is a web application that provides a daily digest of COVID numbers, news, and science, allowing the user to filter what they see to some degree. There are three settings each with a different degree of data being shown. When the user selects a setting, it is cached so that when they return to the website, they won't be shown any data or news they were not expecting.
+The COVID-19 Daily Dashboard is a web application that provides a daily digest of COVID-19 numbers, news, and science, allowing the user to filter what they see to some degree. There are three settings each with a different degree of data being shown. When the user selects a setting, it is cached so that when they return to the website, they won't be shown any data or news they were not expecting.
 
 ## Principles
 The app is built around three governing principles:
@@ -22,8 +22,8 @@ The app is built around three governing principles:
 - To build run `yarn build` or `npm build`
 
 ## Settings:
-1. **Limited:** Basic local (State) numbers.
-2. **Standard:** Local and national numbers.
+1. **Basic:** Basic local (State) numbers.
+2. **General:** Local and national numbers.
 3. **Extensive:** All of the above along with new scientific papers, editorials from various sources, etc.
 
 ## Todo:
