@@ -6,6 +6,7 @@
   --light-background: #FFF;
   --white-text: #FFF;
   --off-white-text: #EAEAEA;
+  --off-white-background: rgb(236, 236, 236);
   --standard-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -67,14 +68,22 @@ html, body {
   display: flex;
   width: 100%;
   max-width: 1000px;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;;
+}
+
+.data-header-wrapper {
+  width: 100%;
 }
 
 #local-numbers, #us-numbers {
   width: 100vw;
   display: grid;
-  grid-template-columns: 230px 230px;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 460px;
+  grid-template-rows: 100px 100px 100px 100px;
 }
 
 .number {
@@ -86,7 +95,7 @@ html, body {
   height: 90%;
   font-size: 18px;
   color: var(--dark-text);
-  background: rgb(236, 236, 236);
+  background: var(--off-white-background);
 }
 
 #news, #science {
@@ -104,7 +113,7 @@ html, body {
   margin: 8px 0;
   max-width: 70vw;
   border-radius: 5px;
-  transition: all .3s ease;
+  transition: all .2s ease;
 }
 
 .article-link {
@@ -115,7 +124,7 @@ html, body {
 }
 
 .article:hover {
-  background: rgb(236, 236, 236);
+  background: var(--off-white-background);
 }
 
 .article-img {
@@ -141,6 +150,10 @@ html, body {
   width: 100vw;
   height: 50px;
   text-align: center;
+  color: var(--white-text);
+}
+
+#footer-link {
   color: var(--white-text);
 }
 

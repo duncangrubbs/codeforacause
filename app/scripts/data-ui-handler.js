@@ -47,42 +47,23 @@ const SCIENCE_QUERY = `covid&from=${getFormattedDate()}&sortBy=publishedAt&categ
 const NEWS_URL = NEWSAPI_BASE_URL + NEWS_QUERY + NEWS_API_KEY;
 const SCIENCE_URL = NEWSAPI_BASE_URL + SCIENCE_QUERY + NEWS_API_KEY;
 
-// Corona API
-// const CORONA_API = 'https://corona-api.com/countries/US';
-
 function getLocalNumbers() {
   getDataFromURL(COVID_TRACKING_3).then((data) => {
     const list = document.getElementById('local-numbers');
-    console.log(data); // eslint-disable-line
 
     let subElement = document.createElement('div');
     subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.positive)} Cases`;
+    subElement.innerHTML = `<b>${numberWithCommas(data.positive)}</b>&nbsp;cases | + <b>${numberWithCommas(data.positiveIncrease)}</b>`;
     list.appendChild(subElement);
 
     subElement = document.createElement('div');
     subElement.classList.add('number');
-    subElement.innerText = `+${numberWithCommas(data.positiveIncrease)} Cases`;
+    subElement.innerHTML = `<b>${numberWithCommas(data.death)}</b>&nbsp;deaths | +<b>${numberWithCommas(data.deathIncrease)}</b>`;
     list.appendChild(subElement);
 
     subElement = document.createElement('div');
     subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.negative)} Negative`;
-    list.appendChild(subElement);
-
-    subElement = document.createElement('div');
-    subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.hospitalizedCurrently)} Hospitalized`;
-    list.appendChild(subElement);
-
-    subElement = document.createElement('div');
-    subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.death)} Deaths`;
-    list.appendChild(subElement);
-
-    subElement = document.createElement('div');
-    subElement.classList.add('number');
-    subElement.innerText = `+${numberWithCommas(data.deathIncrease)} deaths`;
+    subElement.innerHTML = `<b>${numberWithCommas(data.hospitalizedCurrently)}</b>&nbsp;hospitalized | +<b>${numberWithCommas(data.hospitalizedIncrease)}</b>`;
     list.appendChild(subElement);
   });
 }
@@ -91,35 +72,25 @@ function getUSNumbers() {
   getDataFromURL(COVID_TRACKING_2).then((response) => {
     const list = document.getElementById('us-numbers');
     const data = response[0];
-    console.log(data); // eslint-disable-line
+
     let subElement = document.createElement('div');
     subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.positive)} Cases`;
+    subElement.innerHTML = `<b>${numberWithCommas(data.positive)}</b>&nbsp;cases | + <b>${numberWithCommas(data.positiveIncrease)}</b>`;
     list.appendChild(subElement);
 
     subElement = document.createElement('div');
     subElement.classList.add('number');
-    subElement.innerText = `+${numberWithCommas(data.positiveIncrease)} Cases`;
+    subElement.innerHTML = `<b>${numberWithCommas(data.death)}</b>&nbsp;deaths | +<b>${numberWithCommas(data.deathIncrease)}</b>`;
     list.appendChild(subElement);
 
     subElement = document.createElement('div');
     subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.negative)} Negative`;
+    subElement.innerHTML = `<b>${numberWithCommas(data.hospitalizedCurrently)}</b>&nbsp;hospitalized | +<b>${numberWithCommas(data.hospitalizedIncrease)}</b>`;
     list.appendChild(subElement);
 
     subElement = document.createElement('div');
     subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.hospitalizedCurrently)} Hospitalized`;
-    list.appendChild(subElement);
-
-    subElement = document.createElement('div');
-    subElement.classList.add('number');
-    subElement.innerText = `${numberWithCommas(data.death)} Deaths`;
-    list.appendChild(subElement);
-
-    subElement = document.createElement('div');
-    subElement.classList.add('number');
-    subElement.innerText = `+${numberWithCommas(data.deathIncrease)} deaths`;
+    subElement.innerHTML = `<b>${numberWithCommas(data.negative)}</b>&nbsp;negative |&nbsp;<b>${numberWithCommas(data.recovered)}</b>&nbsp;recovered`;
     list.appendChild(subElement);
   });
 }
