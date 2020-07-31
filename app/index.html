@@ -39,34 +39,51 @@
 
   <body>
     <div class="app-wrapper">
-      <h1>Daily Digest</h1>
-
-      <h2>Content Settings</h2>
-      <div class="settings">
-        <button class="setting" id="LIMITED">Limited</button>
-        <button class="setting" id="STANDARD">Standard</button>
-        <button class="setting" id="EXTENSIVE">Extensive</button>
+      <div>
+        <h1>COVID Daily Digest</h1>
+        <div class="settings">
+          <button class="setting" id="LIMITED">Limited</button>
+          <button class="setting" id="STANDARD">Standard</button>
+          <button class="setting" id="EXTENSIVE">Extensive</button>
+        </div>
       </div>
 
-      <h2>By the Numbers</h2>
       <div class="data-wrapper">
-        <div id="local-numbers">
-          <h2>Local</h2>
+        <div>
+          <h2>State numbers, since yesterday</h2>
+          <div id="local-numbers"></div>
         </div>
-        <div id="us-numbers">
-          <h2>US</h2>
+        <div>
+          <h2>US numbers, since yesterday</h2>
+          <div id="us-numbers"></div>
         </div>
       </div>
-      <h2>Government</h2>
-      <div class="data-wrapper"></div>
+      <!-- <h2>Government</h2>
+      <div class="data-wrapper"></div> -->
       <h2>In the News</h2>
       <div class="data-wrapper">
         <div id="news"></div>
       </div>
       <h2>The Science</h2>
-      <div class="data-wrapper"></div>
+      <div class="data-wrapper">
+        <div id="science"></div>
+      </div>
     </div>
 
+
+    <div id="footer">
+      <div class="footer-column">
+        <div class="footer-column__header">Resources</div>
+        <a class="footer-column__link" href="http://newsapi.org">News API</a>
+        <a class="footer-column__link" href="https://covidtracking.com">COVID Tracking</a>
+        <a class="footer-column__link" href="https://corona-api.com">Corona API</a>
+        <a class="footer-column__link" href="https://github.com/duncangrubbs/codeforacause">Source Code</a>
+      </div>
+    </div>
+
+    <div id="copyright">
+      <small id="copyright-text">Made with ❤️ on Github</small>
+    </div>
     <noscript>You need JS to run this site.</noscript>
     
   </body>

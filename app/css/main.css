@@ -27,7 +27,7 @@ html, body {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  align-items: center;
+  width: 100vw;
 }
 
 .settings {
@@ -39,10 +39,10 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 70px;
+  width: 120px;
+  height: 50px;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 1rem;
   border: none;
   margin: 8px;
   transition: all .1s ease-in-out;
@@ -58,11 +58,17 @@ html, body {
   color: white;
 }
 
+.data-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
 #local-numbers, #us-numbers {
   width: 100vw;
   display: grid;
-  grid-template-columns: 230px 230px 230px;
-  grid-template-rows: 100px 100px;
+  grid-template-columns: 230px 230px;
+  grid-template-rows: 100px 100px 100px;
 }
 
 .number {
@@ -70,24 +76,25 @@ html, body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 70px;
+  width: 90%;
+  height: 90%;
   font-size: 18px;
-  color: var(--light-background);
-  background: var(--dark-background);
+  color: var(--dark-text);
+  background: rgb(236, 236, 236);
 }
 
-#news {
-  display: flex;
-  flex-direction: column;
+#news, #science {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 40% 40%;
 }
 
-.news-article {
+.news-article, .science-article {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  padding: 16px;
+  padding: .8rem;
   margin: 8px 0;
   max-width: 70vw;
   border-radius: 5px;
@@ -110,4 +117,42 @@ html, body {
   height: auto;
   margin: 0 8px;
   border-radius: 6px;
+}
+
+/* FOOTER STYLES */
+#footer {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  padding: 1.5% 0 0 12%;
+  background-color: var(--dark-background);
+  width: 100vw;
+  line-height: 1.5;
+}
+
+#copyright {
+  background-color: var(--dark-background);
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  color: var(--white-text);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px;
+  flex-grow: 1;
+  max-width: 150px;
+}
+
+.footer-column__header {
+  font-size: 14pt;
+  color: var(--white-text);
+  font-weight: bold;
+}
+
+.footer-column__link {
+  font-size: 12pt;
+  color: var(--off-white-text);
 }

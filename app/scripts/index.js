@@ -10,4 +10,3 @@ if (Date.now() - lastUpdated > 10*60*1000) {
 const setting = getData('setting');
 
 updateDataUI(setting);
-
