@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "lint": "eslint . --fix",
-    "deploy": "surge -d coviddailydigest.surge.sh -p ./app"
+    "deploy": "git push heroku master"
   },
   "repository": "https://github.com/duncangrubbs/codeforacause.git",
   "author": "Duncan Grubbs <duncan.grubbs@gmail.com>",
