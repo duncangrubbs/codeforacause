@@ -23,7 +23,7 @@ The app is built around three governing principles:
 - Clone this repository and run `npm install` or `yarn install`
 - To start a dev server, run `yarn start` or `npm start`. This will start a dev server at `localhost:3000` which you can view in your browser.
 - To build run `yarn build` or `npm build`
-- To deploy, I use the Heroku CLI and run `yarn deploy` or `npm deploy`, but you must be authenticated with Heroku
+- To deploy, I use the Heroku CLI and run `yarn deploy` or `npm deploy`, but you must be authenticated with Heroku. However, one of the APIs I use (NewsAPI) restricts API key use for deployed websites, so that API does not work on the deployed site :(
 
 ## Settings:
 1. **Basic:** Basic local (State) numbers.
