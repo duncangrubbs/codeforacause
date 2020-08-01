@@ -4,6 +4,8 @@
  * on the user's setting.
  */
 
+import { getData } from './data-storage.js';
+
 // Utility functions
 function getFormattedDate() {
   const today = new Date();
@@ -27,6 +29,8 @@ function clearData() {
   const USNumbers = document.getElementById('us-numbers');
   const news = document.getElementById('news');
   const science = document.getElementById('science');
+  const locationDefaultedHeader = document.getElementById('location-defaulted');
+  if (locationDefaultedHeader != null) { locationDefaultedHeader.remove(); }
 
   localNumbers.textContent = '';
   USNumbers.textContent = '';
@@ -142,9 +146,22 @@ function getScienceData() {
   });
 }
 
+function displayLocationDefaulted() {
+  const wrapper = document.getElementById('local-numbers-wrapper');
+
+  const header = document.createElement('h2');
+  header.innerText = 'No Location Data, defaulting to CA';
+  header.id = 'location-defaulted';
+
+  wrapper.prepend(header);
+}
+
 export function updateDataUI(setting, state) {
   clearData();
   const LOCAL_DATA_URL = `https://covidtracking.com/api/v1/states/${state.toLowerCase()}/current.json`;
+  if (getData('locationDefaulted') === 'true') {
+    displayLocationDefaulted();
+  }
   switch (setting) {
     case 'BASIC':
       getLocalNumbers(LOCAL_DATA_URL);
